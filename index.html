@@ -6,71 +6,87 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
     <title>Thomas Nguyen</title>
 </head>
 
 <body>
-    <div class="header-bar">
-        <div class="header">
-            <a href="index.html">THOMAS</a>
-        </div>
-        <div class="navigation-bar">
-            <ul>
-                <li>Home</li>
-                <li>About</li>
-                <li>Resume</li>
-                <li>Services</li>
-                <li>Skills</li>
-            </ul>
-        </div>
-    </div>
-    <div class="overview">
-        <div class="overview-content">
-
-            <p>HELLO!</p>
-            <h1>I'm a web developer based in Linz</h1>
-            <button>HIRE ME</button>
-            <button>MY WORKS</button>
-        </div>
-        <div class="overview-image-container">
-            <img src="" alt="overview-personal-image">
-        </div>
-    </div>
-    <div class="about-me-container">
-        <div class="about-me-image-container">
-            <img src="" alt="about-me-personal-image">
-        </div>
-        <div class="about-me-content">
-            <h1 class="shadow-header"></h1>
-            <h2 class="text-header"></h2>
-            <p class="description"></p>
-            <ul>
-                <li>
-                    <span>Name:</span>
-                    <span>Thomas Nguyen</span>
-                </li>
-                <li><span>Date of birth:</span>
-                    <span>August 09, 1999</span>
-                </li>
-                <li><span>Address:</span>
-                    <span>XYZ 13, 4061 Pasching, Austria</span>
-                </li>
-                <li><span>Zip code:</span>
-                    <span>1000</span>
-                </li>
-                <li><span>Email:</span>
-                    <span>ngt@gmail.com</span>
-                </li>
-                <li><span>Phone:</span>
-                    <span>+43 1234512345</span>
-                </li>
-            </ul>
-            <div class="cv-container">
-                <p>XY Project completed</p>
-                <button class="cv-button">DOWNLOAD CV</button>
+    <div class="container">
+        <!-- Navigation bar-g -->
+        <div class="header-bar">
+            <div class="header">
+                <a class="title" href="index.html">THOMAS</a>
+            </div>
+            <div class="navigation-bar">
+                <nav>
+                    <ul class="list-nav-bar">
+                        <li><a href="#home-section">Home</a>
+                        </li>
+                        <li><a href="#about-section">About</a></li>
+                        <li><a href="">Resume</a></li>
+                        <li><a href="">Services</a></li>
+                        <li><a href="">Skills</a></li>
+                    </ul>
+                </nav>
             </div>
         </div>
+        <!-- Home overview section -->
+        <section id="home-section">
+            <div class="home">
+                <div class="home-content">
+                    <p>HELLO!</p>
+                    <h1 class="home-header-text">I'm a <span>web <br>developer</span> based <br> in Pasching</h1>
+                    <button class="home-button hire">HIRE ME</button>
+                    <button class="home-button works">MY WORKS</button>
+                </div>
+                <div class="home-image-container fade">
+                    <img src="images/self-pic.png" alt="home-personal-image">
+                </div>
+                <div class="home-image-container fade">
+                    <img src="images/self-pic2.png" alt="home-second-personal-image">
+                </div>
+            </div>
+        </section>
+        <!-- About section -->
+        <section id="about-section">
+            <div class="about-me-container">
+                <div class="about-me-image-container">
+                    <img src="" alt="about-me-personal-image">
+                </div>
+                <div class="about-me-content">
+                    <h1 class="shadow-header"></h1>
+                    <h2 class="text-header"></h2>
+                    <p class="description"></p>
+                    <ul>
+                        <li>
+                            <span>Name:</span>
+                            <span>Thomas Nguyen</span>
+                        </li>
+                        <li><span>Date of birth:</span>
+                            <span>August 09, 1999</span>
+                        </li>
+                        <li><span>Address:</span>
+                            <span>XYZ 13, 4061 Pasching, Austria</span>
+                        </li>
+                        <li><span>Zip code:</span>
+                            <span>1000</span>
+                        </li>
+                        <li><span>Email:</span>
+                            <span>ngt@gmail.com</span>
+                        </li>
+                        <li><span>Phone:</span>
+                            <span>+43 1234512345</span>
+                        </li>
+                    </ul>
+                    <div class="cv-container">
+                        <p>XY Project completed</p>
+                        <button class="cv-button">DOWNLOAD CV</button>
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
+
     <!-- <div class="resume-container">
 
     </div> -->

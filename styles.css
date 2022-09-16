@@ -1,0 +1,157 @@
+body {
+  background-color: black;
+  color: white;
+  /* font-family: "Courier New", Courier, monospace; */
+  /* font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif; */
+  font-family: "Poppins", Arial, sans-serif;
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  height: 400px;
+  /* transform: scaleX(-1); */
+}
+
+.container {
+  margin-top: 30px;
+}
+
+/* navigation bar  */
+
+.header-bar {
+  width: 1000px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8rem;
+  /* position: fixed; */
+}
+
+.title {
+  font-weight: bold;
+  font-size: 2.5rem;
+  color: #ffbd39;
+  box-shadow: inset 0 0 0 0 #ffbd39;
+  margin: 0 -1.25rem;
+  padding: 0rem 1.25rem;
+  transition: color 0.3s ease-in-out, box-shadow 1s ease-in-out;
+}
+
+.title:hover {
+  box-shadow: inset 0px 0px 0px 110px #ffbd39;
+  color: black;
+}
+
+.list-nav-bar li {
+  display: inline;
+  margin: 0 20px 0;
+}
+
+.list-nav-bar li a {
+  color: white;
+}
+
+.list-nav-bar li a:hover {
+  color: #ffbd39;
+  padding-bottom: 5px;
+  border-bottom: 2px solid #ffbd39;
+  transition: 0.5s;
+}
+
+/* Home overview section */
+.home {
+  display: flex;
+  justify-content: space-between;
+}
+
+.home-content p {
+  font-size: 0.8rem;
+  letter-spacing: 3px;
+  color: #ffbd39;
+}
+
+.home-header-text {
+  max-width: 650px;
+  font-size: 3rem;
+  font-weight: 800;
+}
+
+.home-header-text span {
+  color: #ffbd39;
+}
+
+.home-button {
+  font-size: 0.8rem;
+  font-weight: 900;
+  letter-spacing: 2px;
+  width: 140px;
+  height: 50px;
+  border-width: 1px;
+  color: #fff;
+  border-color: #fff;
+  border-top-left-radius: 28px;
+  border-top-right-radius: 28px;
+  border-bottom-left-radius: 28px;
+  border-bottom-right-radius: 28px;
+  background: #ffbd39;
+}
+
+.home-button.hire {
+  color: black;
+  border: none;
+}
+
+.home-button.works {
+  background-color: transparent;
+}
+
+.home-button.hire:hover {
+  background: black;
+  color: #fff;
+  border: 1px solid white;
+  transition: 0.5s;
+}
+
+.home-button.works:hover {
+  background: #ffbd39;
+  border: none;
+  color: black;
+  transition: 0.5s;
+}
+
+.home-image-container {
+  display: none;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+button:hover {
+  cursor: pointer;
+}
