@@ -1,9 +1,6 @@
 body {
   background-color: black;
   color: white;
-  /* font-family: "Courier New", Courier, monospace; */
-  /* font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif; */
   font-family: "Poppins", Arial, sans-serif;
   font-size: 1.2rem;
   display: flex;
@@ -28,18 +25,19 @@ img {
 }
 
 .container {
-  margin-top: 30px;
+  width: 1000px;
 }
 
-/* navigation bar  */
-
+/* NAVIGATION BAR  */
 .header-bar {
   width: 1000px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 8rem;
-  /* position: fixed; */
+  position: fixed;
+  padding: 30px 0;
+  background-color: black;
 }
 
 .title {
@@ -64,16 +62,22 @@ img {
 
 .list-nav-bar li a {
   color: white;
+  transition: color 0.5s, padding-bottom 0.5s, border-bottom 0.5s;
 }
 
+.active-navigation,
 .list-nav-bar li a:hover {
   color: #ffbd39;
   padding-bottom: 5px;
   border-bottom: 2px solid #ffbd39;
-  transition: 0.5s;
 }
 
-/* Home overview section */
+/* HOME OVERVIEW SECTION */
+.home-container {
+  display: none;
+  padding-top: 150px;
+}
+
 .home {
   display: flex;
   justify-content: space-between;
@@ -81,18 +85,28 @@ img {
 
 .home-content p {
   font-size: 0.8rem;
+  font-weight: bold;
   letter-spacing: 3px;
   color: #ffbd39;
+  margin: 0%;
+  padding: 0%;
 }
 
 .home-header-text {
   max-width: 650px;
-  font-size: 3rem;
+  font-size: 3.5rem;
   font-weight: 800;
+  margin-top: 30px;
 }
 
 .home-header-text span {
   color: #ffbd39;
+}
+
+.home-content h2 {
+  font-weight: 300;
+  margin-bottom: 30px;
+  margin-top: 0;
 }
 
 .home-button {
@@ -134,18 +148,35 @@ img {
   transition: 0.5s;
 }
 
-.home-image-container {
-  display: none;
+.dots-container {
+  text-align: center;
+}
+
+.dot {
+  cursor: pointer;
+  height: 12.5px;
+  width: 12.5px;
+  margin: 0 2px;
+  background-color: rgba(187, 187, 187, 0.242);
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+  /* background-color: #717171; */
+  background-color: #fff;
 }
 
 .fade {
   animation-name: fade;
-  animation-duration: 1.5s;
+  animation-duration: 4s;
 }
 
 @keyframes fade {
   from {
-    opacity: 0.4;
+    opacity: 0.1;
   }
   to {
     opacity: 1;

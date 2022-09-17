@@ -12,7 +12,8 @@
 
 <body>
     <div class="container">
-        <!-- Navigation bar-g -->
+        <!-- Navigation bar -->
+
         <div class="header-bar">
             <div class="header">
                 <a class="title" href="index.html">THOMAS</a>
@@ -30,21 +31,42 @@
                 </nav>
             </div>
         </div>
+
         <!-- Home overview section -->
         <section id="home-section">
-            <div class="home">
-                <div class="home-content">
-                    <p>HELLO!</p>
-                    <h1 class="home-header-text">I'm a <span>web <br>developer</span> based <br> in Pasching</h1>
-                    <button class="home-button hire">HIRE ME</button>
-                    <button class="home-button works">MY WORKS</button>
+            <div class="home-container fade">
+
+                <div class="home ">
+                    <div class="home-content">
+                        <p>HELLO!</p>
+                        <h1 class="home-header-text">I'm a <span>web <br>developer</span> based <br> in Pasching</h1>
+                        <button class="home-button hire">HIRE ME</button>
+                        <button class="home-button works" onclick="elementInViewport();">MY WORKS</button>
+                    </div>
+                    <div class="home-image-container fade">
+                        <img src="images/self-pic.png" alt="home-personal-image">
+                    </div>
+
                 </div>
-                <div class="home-image-container fade">
-                    <img src="images/self-pic.png" alt="home-personal-image">
+            </div>
+            <div class="home-container fade">
+                <div class="home ">
+                    <div class="home-content">
+                        <p>HELLO!</p>
+                        <h1 class="home-header-text">I'm <span>Thomas <br> Nguyen</span></h1>
+                        <h2 class="smaller-header">A Web Developer</h2>
+                        <button class="home-button hire">HIRE ME</button>
+                        <button class="home-button works">MY WORKS</button>
+                    </div>
+
+                    <div class="home-image-container">
+                        <img src="images/self-pic2.png" alt="home-second-personal-image">
+                    </div>
                 </div>
-                <div class="home-image-container fade">
-                    <img src="images/self-pic2.png" alt="home-second-personal-image">
-                </div>
+            </div>
+            <div class="dots-container">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
             </div>
         </section>
         <!-- About section -->
@@ -85,6 +107,24 @@
                 </div>
             </div>
         </section>
+        <div class="test-viewport">
+
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci non eius sequi fugit a, reprehenderit
+                sunt
+                delectus eveniet sit enim tenetur at ipsa similique magnam dolores error beatae rerum! Perspiciatis!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci non eius sequi fugit a, reprehenderit
+                sunt
+                delectus eveniet sit enim tenetur at ipsa similique magnam dolores error beatae rerum! Perspiciatis!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci non eius sequi fugit a, reprehenderit
+                sunt
+                delectus eveniet sit enim tenetur at ipsa similique magnam dolores error beatae rerum! Perspiciatis!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci non eius sequi fugit a, reprehenderit
+                sunt
+                delectus eveniet sit enim tenetur at ipsa similique magnam dolores error beatae rerum! Perspiciatis!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci non eius sequi fugit a, reprehenderit
+                sunt
+                delectus eveniet sit enim tenetur at ipsa similique magnam dolores error beatae rerum! Perspiciatis!</p>
+        </div>
     </div>
 
     <!-- <div class="resume-container">
