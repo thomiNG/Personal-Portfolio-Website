@@ -33,6 +33,12 @@ img {
   width: 1000px;
 }
 
+button {
+  /* padding: 3px 10px; */
+  height: 50px;
+  padding: 0 20px;
+}
+
 button:hover {
   cursor: pointer;
 }
@@ -119,23 +125,25 @@ button:hover {
   margin-top: 0;
 }
 
-.home-button {
+/* 
+when seperating each section to own css file, 
+make sure to create own .cv-button styling,
+else it is styled in another css file
+*/
+.home-button,
+.cv-button {
   font-size: 0.8rem;
   font-weight: 900;
   letter-spacing: 2px;
-  width: 140px;
-  height: 50px;
   border-width: 1px;
   color: #fff;
   border-color: #fff;
-  border-top-left-radius: 28px;
-  border-top-right-radius: 28px;
-  border-bottom-left-radius: 28px;
-  border-bottom-right-radius: 28px;
+  border-radius: 28px;
   background-color: #ffbd39;
 }
 
-.home-button.hire {
+.home-button.hire,
+.cv-button {
   color: black;
   border: none;
 }
@@ -144,10 +152,12 @@ button:hover {
   background-color: transparent;
 }
 
-.home-button.hire:hover {
+.home-button.hire:hover,
+.cv-button:hover {
   animation-name: colorChange;
   animation-duration: 0.5s;
   animation-fill-mode: forwards;
+  padding: 0 19px;
   border: 1px solid white;
 }
 
@@ -214,7 +224,6 @@ button:hover {
 
 .about-me-content {
   position: relative;
-  z-index: -1;
 }
 
 .text-header {
@@ -223,7 +232,6 @@ button:hover {
   left: -20px;
   font-size: 7rem;
   color: rgba(255, 255, 255, 0.1);
-  z-index: -1;
   font-weight: 900;
   margin-top: 15px;
 }
@@ -264,3 +272,8 @@ button:hover {
   color: #ffbd39;
   font-weight: 600;
 }
+
+/* .cv-button {
+} */
+
+/* RESUME SECTION */
