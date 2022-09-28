@@ -19,38 +19,53 @@ function showSlides(n) {
     slideIndex = 1;
   }
   for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
+    dots[i].className = dots[i].className.replace(" active-dot", "");
   }
   slides[slideIndex - 1].style.display = "block";
-  dots[slideIndex - 1].className += " active";
-  slideshowTimeout = setTimeout(showSlides, 700000); // Change image every 10 seconds
+  dots[slideIndex - 1].className += " active-dot";
+  slideshowTimeout = setTimeout(showSlides, 7000); // Change image every 10 seconds
 }
 
-var homeSection = document.getElementById("home-section");
-var aboutSection = document.getElementById("about-section");
-var myElement = document.querySelector(".test-viewport");
+// scrolling animation for navigation bar (section depended)
+let section = document.querySelectorAll("section");
+let menu = document.querySelectorAll("nav ul li a");
+window.onscroll = () => {
+  section.forEach((i) => {
+    let top = window.scrollY;
+    let offset = i.offsetTop - 300;
+    let height = i.offsetHeight;
+    let id = i.getAttribute("id");
 
-// window.onscroll = function () {
-//   elementInViewport();
-// };
+    if (top >= offset && top < offset + height) {
+      menu.forEach((link) => {
+        link.classList.remove("active-navigation");
+        document
+          //   .querySelector('header nav a[href="#' + id + '"]')
+          .querySelector("." + id)
+          .classList.add("active-navigation");
+      });
+    }
+  });
+};
 
-function elementInViewport() {
-  var bounding = myElement.getBoundingClientRect();
-  var myElementHeight = myElement.offsetHeight;
-  var myElementWidth = myElement.offsetWidth;
+// scrolling animation
+function reveal() {
+  var reveals = document.querySelectorAll(".reveal");
 
-  if (
-    bounding.top >= -myElementHeight &&
-    bounding.left >= -myElementWidth &&
-    bounding.right <=
-      (window.innerWidth || document.documentElement.clientWidth) +
-        myElementWidth &&
-    bounding.bottom <=
-      (window.innerHeight || document.documentElement.clientHeight) +
-        myElementHeight
-  ) {
-    alert("Element is in the viewport!");
-  } else {
-    alert("Element is NOT in the viewport!");
+  for (let i = 0; i < reveals.length; i++) {
+    //window viewport height
+    var windowHeight = window.innerHeight;
+    //elements distance to top of viewport
+    var elementTop = reveals[i].getBoundingClientRect().top;
+    var elementVisible = 150;
+
+    if (elementTop < windowHeight - elementVisible) {
+      reveals[i].classList.add("active-scroll");
+    } else {
+      reveals[i].classList.remove("active-scroll");
+    }
   }
 }
+
+reveal();
+window.addEventListener("scroll", reveal);

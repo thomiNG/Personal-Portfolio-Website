@@ -43,6 +43,20 @@ button:hover {
   cursor: pointer;
 }
 
+/* SCROLL NAVIGATION FOR EACH SECTION */
+
+.reveal {
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: 1s all ease;
+}
+
+.reveal.active-scroll {
+  transform: translateY(0);
+  opacity: 1;
+}
+
 /* NAVIGATION BAR  */
 .header-bar {
   width: 1000px;
@@ -51,7 +65,7 @@ button:hover {
   align-items: center;
   margin-bottom: 8rem;
   position: fixed;
-  padding: 30px 0;
+  padding: 10px 0;
   background-color: black;
   z-index: 100;
 }
@@ -194,7 +208,7 @@ else it is styled in another css file
   transition: background-color 0.6s ease;
 }
 
-.active,
+.active-dot,
 .dot:hover {
   /* background-color: #717171; */
   background-color: #fff;
@@ -217,7 +231,7 @@ else it is styled in another css file
 /* ABOUT SECTION */
 
 .about-me-container {
-  margin-top: 150px;
+  margin-top: 50px;
   display: flex;
   justify-content: space-between;
 }
@@ -227,8 +241,14 @@ else it is styled in another css file
 }
 
 .text-header {
+  font-size: 3.5rem;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.shadow-header {
   position: absolute;
-  top: 0;
+  top: 0px;
   left: -20px;
   font-size: 7rem;
   color: rgba(255, 255, 255, 0.1);
@@ -277,3 +297,75 @@ else it is styled in another css file
 } */
 
 /* RESUME SECTION */
+
+.resume-container {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.resume-content {
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+.resume-content .shadow-header {
+  right: 0;
+  left: 0;
+  top: 0px;
+  margin: auto;
+}
+
+.resume-content .description {
+  margin: auto;
+  margin-top: 10px;
+  max-width: 800px;
+}
+
+.resume-row {
+  display: flex;
+}
+
+.resume-card {
+  width: 480px;
+  height: 280px;
+  padding: 40px 30px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.resume-card-date {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #ffbd39;
+}
+
+.resume-card-experience {
+  font-weight: 300;
+  margin: 15px 0;
+}
+
+.resume-card-institute {
+  font-size: 1rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #999999;
+}
+
+.resume-card-description {
+  color: #999999;
+  margin-top: 25px;
+}
+
+.arrow-right {
+  transform: scaleY(-1);
+}
+
+.arrow-left {
+  transform: scale(-1);
+}
+
+.resume-card.final {
+  width: 100%;
+  text-align: center;
+  padding: 30px 100px;
+}
