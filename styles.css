@@ -26,8 +26,38 @@ a {
 
 img {
   height: 400px;
-  /* transform: scaleX(-1); */
 }
+
+hr {
+  border-width: 0;
+  border-top: 0.5rem dotted #eaf6f6;
+  margin: 50px auto;
+  width: 7%;
+}
+
+#btn-scroll-top {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  /* font-size: 18px; */
+  border: none;
+  outline: none;
+  background-color: #ffbd39;
+  color: white;
+  cursor: pointer;
+  /* padding: 15px; */
+  border-radius: 50%;
+}
+
+#btn-scroll-top i {
+  color: black;
+}
+
+/* #btn-scroll-top:hover {
+  background-color: #555;
+} */
 
 .container {
   width: 1000px;
@@ -70,7 +100,7 @@ button:hover {
   z-index: 100;
 }
 
-.title {
+/* .title {
   font-weight: bold;
   font-size: 2.5rem;
   color: #ffbd39;
@@ -78,11 +108,11 @@ button:hover {
   margin: 0 -1.25rem;
   padding: 0rem 1.25rem;
   transition: color 0.3s ease-in-out, box-shadow 1s ease-in-out;
-}
+} */
 
-.title:hover {
-  box-shadow: inset 0px 0px 0px 110px #ffbd39;
-  color: black;
+.title img {
+  height: 50px;
+  padding-top: 10px;
 }
 
 .list-nav-bar li {
@@ -167,7 +197,8 @@ else it is styled in another css file
 }
 
 .home-button.hire:hover,
-.cv-button:hover {
+.cv-button:hover,
+#btn-scroll-top:hover {
   animation-name: colorChange;
   animation-duration: 0.5s;
   animation-fill-mode: forwards;
@@ -236,6 +267,11 @@ else it is styled in another css file
   justify-content: space-between;
 }
 
+.about-me-image-container img {
+  height: 600px;
+  transform: scaleX(-1);
+}
+
 .about-me-content {
   position: relative;
 }
@@ -254,6 +290,7 @@ else it is styled in another css file
   color: rgba(255, 255, 255, 0.1);
   font-weight: 900;
   margin-top: 15px;
+  z-index: -1;
 }
 
 .description {
@@ -303,19 +340,19 @@ else it is styled in another css file
   margin-bottom: 50px;
 }
 
-.resume-content {
+.section-header-content {
   text-align: center;
-  margin-bottom: 100px;
+  margin-bottom: 70px;
 }
 
-.resume-content .shadow-header {
+.section-header-content .shadow-header {
   right: 0;
   left: 0;
-  top: 0px;
+  top: 0;
   margin: auto;
 }
 
-.resume-content .description {
+.section-header-content .description {
   margin: auto;
   margin-top: 10px;
   max-width: 800px;
@@ -368,4 +405,177 @@ else it is styled in another css file
   width: 100%;
   text-align: center;
   padding: 30px 100px;
+}
+
+/* SKILLS SECTION */
+
+.skills-container {
+  margin-bottom: 50px;
+}
+
+.skills-container .section-header-content .shadow-header {
+  top: 5px;
+}
+
+.skill-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.skill-bars-container {
+  width: 480px;
+}
+
+.skill {
+  margin-bottom: 35px;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.skill > p {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.skill:before {
+  width: 100%;
+  height: 10px;
+  content: "";
+  display: block;
+  position: absolute;
+  background: #1a1a1a;
+  bottom: 0;
+  border-radius: 5px;
+}
+
+.skill-bar {
+  width: 100%;
+  height: 10px;
+  background: #ffbd39;
+  display: block;
+  position: relative;
+  border-radius: 5px;
+}
+
+.skill-bar span {
+  position: absolute;
+  top: -30px;
+  padding: 0;
+  font-size: 18px;
+  padding: 3px 0;
+  font-weight: 500;
+}
+
+.skill-bar {
+  position: relative;
+}
+
+.html-skill {
+  width: 70%;
+}
+
+.css-skill {
+  width: 70%;
+}
+
+.javascript-skill {
+  width: 75%;
+}
+
+.iec-skill {
+  width: 90%;
+}
+
+.java-skill {
+  width: 80%;
+}
+
+.git-skill {
+  width: 75%;
+}
+
+.skill-bar .skill-count {
+  right: 0;
+}
+
+/* CONTACT SECTION */
+
+.contact-container {
+  /* margin-bottom: 100px; */
+}
+
+.contact-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.contact-info-container {
+  text-align: center;
+}
+
+.icon-container {
+  background-color: #1a1a1a;
+  width: 100px;
+  height: 100px;
+  margin: auto;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.contact-type {
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.contact-info {
+  margin-top: 30px;
+  font-size: 1rem;
+}
+
+/* Font Awesome Icons */
+.icon-container .fa-solid,
+.icon-container .fa-brands {
+  color: #ffbd39;
+}
+
+/* Footer */
+
+.footer {
+  margin-top: 0px;
+  text-align: center;
+}
+
+.footer .logo-container img {
+  height: 100px;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  margin: 30px 0;
+}
+
+.footer-links a {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 10px;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.footer-links .fa-brands {
+  color: #999999;
+}
+
+.copyright-text {
+  color: #999999;
+  font-size: 1rem;
 }

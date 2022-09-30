@@ -9,17 +9,20 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&display=swap" rel="stylesheet">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+    <script src="https://kit.fontawesome.com/da2677eb08.js" crossorigin="anonymous"></script>
     <script defer src="script.js"></script>
     <title>Thomas Nguyen</title>
 </head>
 
 <body>
+    <button id="btn-scroll-top" title="Go to top"><i class="fa-solid fa-xl fa-arrow-up"></i></button>
     <div class="container">
         <!-- Navigation bar -->
-
         <div class="header-bar">
             <div class="header">
-                <a class="title" href="index.html">THOMAS</a>
+                <!-- <a class="title" href="index.html">THOMAS</a> -->
+                <a class="title" href="index.html"><img src="images/TN_logo_white.png" alt="logo"></a>
             </div>
             <div class="navigation-bar">
                 <nav>
@@ -116,13 +119,13 @@
         </section>
         <section id="resume-section">
             <div class="resume-container reveal">
-                <div class="resume-content">
+                <div class="section-header-content">
                     <h1 class="text-header">Resume</h1>
                     <h2 class="shadow-header">Resume</h2>
-                    <p class="description">A brief summary of my career path. <br> From a disoriented boy with no real
+                    <p class="description">A brief summary of my career path <br> From a disoriented boy with no real
                         goals in life
                         to a mature
-                        wiser guy, who just wants to follow his passion for programming.
+                        wiser guy, who just wants to follow his passion for programming
                     </p>
                 </div>
                 <div class="resume-history">
@@ -182,10 +185,104 @@
                     </div>
                 </div>
             </div>
-            <!-- <img class="arrow-left" src="https://media3.giphy.com/media/TiroX8dZ1RSVvciB6D/giphy.gif?cid=ecf05e4709c22mtvzeshle9h6flgj91jyro5loix8fiimppk&rid=giphy.gif&ct=g"
-                alt="arrow-gif"> -->
         </section>
-    </div>
+        <section id="skills-section">
+            <div class="skills-container reveal">
+                <div class="section-header-content">
+                    <h1 class="text-header">My Skills</h1>
+                    <h2 class="shadow-header">Skills</h2>
+                    <p class="description">Skill level displayed as percentage in a progress bar
+                    </p>
+                </div>
+                <div class="skill-content">
+                    <div class="skill-bars-container">
+                        <div class="skill">
+                            <p>HTML5</p>
+                            <div class="skill-bar html-skill">
+                                <span class="skill-count">70%</span>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <p>CSS3</p>
+                            <div class="skill-bar css-skill">
+                                <span class="skill-count">70%</span>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <p>JavaScript</p>
+                            <div class="skill-bar javascript-skill">
+                                <span class="skill-count">75%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-bars-container">
+                        <div class="skill">
+                            <p>PLC / IEC</p>
+                            <div class="skill-bar iec-skill">
+                                <span class="skill-count">90%</span>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <p>JAVA</p>
+                            <div class="skill-bar java-skill">
+                                <span class="skill-count">80%</span>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <p>GIT</p>
+                            <div class="skill-bar git-skill">
+                                <span class="skill-count">75%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="contact-section">
+            <div class="contact-container reveal">
+                <div class="section-header-content">
+                    <h1 class="text-header">Contact Me</h1>
+                    <h2 class="shadow-header">Contact</h2>
+                    <p class="description">Feel free to contact me if my personal portfolio looks interesting to you!
+                    </p>
+                </div>
+                <div class="contact-content">
+                    <div class="contact-info-container">
+                        <div class="icon-container"><i class="fa-solid fa-xl fa-location-dot"></i></div>
+                        <h2 class="contact-type">Address</h2>
+                        <p class="contact-info">Gerstenweg 8, 4061 Pasching</p>
+                    </div>
+                    <div class="contact-info-container">
+                        <div class="icon-container"><i class="fa-solid fa-xl fa-phone"></i></div>
+                        <h2 class="contact-type">Contact number</h2>
+                        <p class="contact-info">+43 660 3288876</p>
+                    </div>
+                    <div class="contact-info-container">
+                        <div class="icon-container"><i class="fa-solid fa-xl fa-paper-plane"></i></div>
+                        <h2 class="contact-type">Email Address</h2>
+                        <p class="contact-info">thomas.manhhung.nguyen@gmail.com</p>
+                    </div>
+                    <div class="contact-info-container">
+                        <div class="icon-container"><i class="fa-brands fa-xl fa-github"></i></div>
+                        <h2 class="contact-type">GitHub</h2>
+                        <p class="contact-info">github.com/thomiNG</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer">
+                <hr>
+                <div class="logo-container"><img src="images/TN_with_name_Logo.png" alt="logo"></div>
+                <div class="footer-links">
+                    <a href="https://www.linkedin.com/in/thomas-nguyen-a445a1232/">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://www.instagram.com/nguyenthomas16/">
+                        <i class="fa-brands fa-xl fa-instagram"></i>
+                    </a>
+                </div>
+                <p class="copyright-text">Copyrights @ 2022 Thomas Nguyen. All rights reserved.</p>
+            </div>
+        </section>
 </body>
 
 </html>

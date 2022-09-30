@@ -69,3 +69,43 @@ function reveal() {
 
 reveal();
 window.addEventListener("scroll", reveal);
+
+// Scroll to top functioality
+// Get the button
+let btnScrollTop = document.getElementById("btn-scroll-top");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function () {
+  scrollFunction();
+};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    btnScrollTop.style.display = "block";
+  } else {
+    btnScrollTop.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function scrollTop() {
+  console.log("button working");
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+
+btnScrollTop.addEventListener("click", scrollTop);
+
+// change color of arrow icon when hovering over button
+let arrowIcon = document.querySelector(".fa-arrow-up");
+
+// change color to white when hovering over button
+btnScrollTop.addEventListener(
+  "mouseover",
+  () => (arrowIcon.style.color = "white")
+);
+
+// change color back to black when removing the mouse out of button
+btnScrollTop.addEventListener("mouseout", () => {
+  arrowIcon.style.color = "black";
+});
