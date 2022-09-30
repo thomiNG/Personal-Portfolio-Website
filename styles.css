@@ -267,9 +267,13 @@ else it is styled in another css file
   justify-content: space-between;
 }
 
+.about-me-image-container {
+  margin-right: 30px;
+}
+
 .about-me-image-container img {
   height: 600px;
-  transform: scaleX(-1);
+  /* transform: scaleX(-1); */
 }
 
 .about-me-content {
@@ -533,7 +537,7 @@ else it is styled in another css file
 }
 
 .contact-info {
-  margin-top: 30px;
+  margin-top: 15px;
   font-size: 1rem;
 }
 
