@@ -25,6 +25,12 @@
             <div class="header">
                 <!-- <a class="title" href="index.html">THOMAS</a> -->
                 <a class="title" href="index.html"><img src="images/TN_logo_white.png" alt="logo"></a>
+                <!-- <i class="fa-solid fa-bars" onclick="toggleMenu()"></i> -->
+                <div class="hamburger-menu" onclick="toggleMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </div>
             <div class="navigation-bar">
                 <nav>
@@ -34,19 +40,21 @@
                         <li><a class="resume-section" href="#resume-section">Resume</a></li>
                         <li><a class="skills-section" href="#skills-section">Skills</a></li>
                         <!-- <li><a href="#project">Projects</a></li> -->
-                        <li><a class="contact-section" href="#contact-section">Contact</a></li>
+                        <li><a class="contact-section" href="#contact-section">Contact</a>
+                        </li>
                     </ul>
                 </nav>
             </div>
         </div>
 
         <!-- Home overview section -->
-        <section id="home-section">
+        <section id=" home-section">
             <div class="home-container fade">
                 <div class="home ">
                     <div class="home-content">
                         <p>HELLO!</p>
-                        <h1 class="home-header-text">I'm a <span>web <br>developer</span> based <br> in Pasching</h1>
+                        <h1 class="home-header-text">I'm a <span>web <br>developer</span> based <br> in Pasching
+                        </h1>
                         <button class="home-button hire"
                             onclick="document.location =  'mailto:thomas.manhhung.nguyen@gmail.com?subject=Mail from Thomas Nguyen his Portfolio Website'">HIRE
                             ME</button>
@@ -89,10 +97,14 @@
                     <img src="images/self-pic3.png" alt="about-me-personal-image">
                 </div>
                 <div class="about-me-content">
-                    <h1 class="text-header">About Me</h1>
-                    <h2 class="shadow-header">About</h2>
-                    <p class="description">Just an usual guy who comes from Pasching and who loves coding and football,
-                        especially Chelsea Football Club. </p>
+                    <div class="about-me-headers">
+
+                        <h1 class="text-header">About Me</h1>
+                        <h2 class="shadow-header">About</h2>
+                        <p class="description">Just an usual guy who comes from Pasching and who loves coding
+                            and football,
+                            especially Chelsea Football Club. </p>
+                    </div>
                     <table class="about-table">
                         <tr>
                             <th>Name:</th>
@@ -132,7 +144,8 @@
                 <div class="section-header-content">
                     <h1 class="text-header">Resume</h1>
                     <h2 class="shadow-header">Resume</h2>
-                    <p class="description">A brief summary of my career path <br> From a disoriented boy with no real
+                    <p class="description">A brief summary of my career path <br> From a disoriented boy
+                        with no real
                         goals in life
                         to a mature
                         wiser guy, who just wants to follow his passion for programming
@@ -142,9 +155,11 @@
                     <div class="resume-row reveal">
                         <div class="resume-card">
                             <span class="resume-card-date">09 / 2012 – 06 / 2018 </span>
-                            <h2 class="resume-card-experience">Diploma in Electronics & technical Informatics</h2>
+                            <h2 class="resume-card-experience">Diploma in Electronics & technical
+                                Informatics</h2>
                             <span class="resume-card-institute">HTBLA LEONDING</span>
-                            <p class="resume-card-description">Education to understand and combine the functionalities
+                            <p class="resume-card-description">Education to understand and combine the
+                                functionalities
                                 between hard- and software.</p>
                         </div>
                         <img class="arrow-right"
@@ -159,8 +174,10 @@
                             <span class="resume-card-date">08/2019 – 10/2020</span>
                             <h2 class="resume-card-experience">Service Support Engineer</h2>
                             <span class="resume-card-institute">KEBA AG</span>
-                            <p class="resume-card-description">1st, 2nd and 3rd level technical support for customers
-                                and technicians. <br>Scheduling of service operations at the customer's site and also
+                            <p class="resume-card-description">1st, 2nd and 3rd level technical support for
+                                customers
+                                and technicians. <br>Scheduling of service operations at the customer's site
+                                and also
                                 logfile
                                 analyses.</p>
                         </div>
@@ -170,8 +187,10 @@
                             <span class="resume-card-date">10/2020 – 12/2022</span>
                             <h2 class="resume-card-experience">Global Application Engineer</h2>
                             <span class="resume-card-institute">KEBA AG</span>
-                            <p class="resume-card-description">Clarification, development and implementation of a
-                                PLC/HMI application to the requirements of customers worldwide. Commissioning of
+                            <p class="resume-card-description">Clarification, development and implementation
+                                of a
+                                PLC/HMI application to the requirements of customers worldwide.
+                                Commissioning of
                                 the
                                 machine at the customer's site.</p>
                         </div>
@@ -187,9 +206,12 @@
                             <span class="resume-card-date">01/2023 - ??</span>
                             <h2 class="resume-card-experience">Web Developer</h2>
                             <span class="resume-card-institute">???</span>
-                            <p class="resume-card-description">Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
-                                sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
-                                voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd
+                            <p class="resume-card-description">Lorem ipsum dolor sit amet, consetetur
+                                sadipscing elitr,
+                                sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+                                erat, sed diam
+                                voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
+                                clita kasd
                                 gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. </p>
                         </div>
                     </div>
@@ -253,7 +275,8 @@
                 <div class="section-header-content">
                     <h1 class="text-header">Contact Me</h1>
                     <h2 class="shadow-header">Contact</h2>
-                    <p class="description">Feel free to contact me if my personal portfolio looks interesting to you!
+                    <p class="description">Feel free to contact me if my personal portfolio looks
+                        interesting to you!
                     </p>
                 </div>
                 <div class="contact-content">

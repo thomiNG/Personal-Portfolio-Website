@@ -1,3 +1,27 @@
+// hamburger menu
+let navBar = document.querySelector(".list-nav-bar");
+// CURRENT WORKAROUND!
+//  -> without flag condition,
+//  menu "button" must be double clicked in order to open menu list when site is loaded first time,
+//  because navBar.style.maxHeight is init not 0px even though it is set to 0px in CSS
+let toggleMenuInitFlag = false;
+
+// setting maxHeight before function call will cause position errors for desktop size
+// navBar.style.maxHeight = "0px";
+function toggleMenu() {
+  if (toggleMenuInitFlag == false) {
+    toggleMenuInitFlag = true;
+    navBar.style.maxHeight = "0px";
+  }
+  console.log(navBar.style.maxHeight + " + triggered");
+  if (navBar.style.maxHeight == "0px") {
+    navBar.style.maxHeight = "230px";
+  } else {
+    navBar.style.maxHeight = "0px";
+  }
+}
+
+// slideshow animation
 let slideIndex = 0;
 var slideshowTimeout;
 showSlides();

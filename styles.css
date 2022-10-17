@@ -28,13 +28,6 @@ img {
   height: 400px;
 }
 
-hr {
-  border-width: 0;
-  border-top: 0.5rem dotted #eaf6f6;
-  margin: 50px auto;
-  width: 7%;
-}
-
 #btn-scroll-top {
   display: none;
   position: fixed;
@@ -61,6 +54,7 @@ hr {
 
 .container {
   width: 1000px;
+  max-width: 90%;
 }
 
 button {
@@ -89,6 +83,7 @@ button:hover {
 
 /* NAVIGATION BAR  */
 .header-bar {
+  max-width: 100%;
   width: 1000px;
   display: flex;
   justify-content: space-between;
@@ -130,6 +125,70 @@ button:hover {
   color: #ffbd39;
   padding-bottom: 5px;
   border-bottom: 2px solid #ffbd39;
+}
+
+.hamburger-menu {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  margin-right: 30px;
+  display: none;
+}
+
+hamburger-menu:hover {
+  cursor: pointer;
+}
+
+.hamburger-menu span {
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+
+  background: #cdcdcd;
+  border-radius: 3px;
+
+  z-index: 1;
+}
+
+.fa-bars {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  display: none;
+}
+
+.fa-bars:hover {
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 768px) {
+  .header-bar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .list-nav-bar {
+    /* display: none; */
+    overflow: hidden;
+    max-height: 0px;
+    transition: max-height 1s;
+  }
+
+  .list-nav-bar li {
+    display: list-item;
+    padding-bottom: 20px;
+  }
+
+  .hamburger-menu {
+    display: block;
+  }
+
+  /* 
+  .fa-bars {
+    display: inline-block;
+  } */
 }
 
 /* HOME OVERVIEW SECTION */
@@ -259,6 +318,48 @@ else it is styled in another css file
   }
 }
 
+@media only screen and (max-width: 768px) {
+  .home-container {
+    position: relative;
+  }
+
+  .home {
+    display: flex;
+    justify-content: center;
+  }
+
+  .home-content {
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    bottom: 5%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    z-index: 1;
+  }
+
+  .home-image-container {
+    max-width: 95%;
+  }
+
+  .home-image-container img {
+    width: 100%;
+    height: auto;
+  }
+
+  .home-header-text {
+    font-size: 1rem;
+  }
+
+  .smaller-header {
+    font-size: 1rem;
+  }
+
+  .home-button {
+    font-size: 0.8rem;
+  }
+}
+
 /* ABOUT SECTION */
 
 .about-me-container {
@@ -337,6 +438,30 @@ else it is styled in another css file
 /* .cv-button {
 } */
 
+@media only screen and (max-width: 768px) {
+  .about-me-image-container {
+    display: none;
+  }
+
+  .about-me-headers {
+    text-align: center;
+  }
+
+  .shadow-header {
+    right: 0;
+    left: 0;
+    top: 2.5%;
+    margin: auto;
+    font-size: 5rem;
+  }
+
+  .description,
+  .about-table th,
+  .about-table td {
+    font-size: 0.9rem;
+  }
+}
+
 /* RESUME SECTION */
 
 .resume-container {
@@ -409,6 +534,24 @@ else it is styled in another css file
   width: 100%;
   text-align: center;
   padding: 30px 100px;
+}
+
+@media only screen and (max-width: 768px) {
+  .arrow-left,
+  .arrow-right {
+    display: none;
+  }
+
+  .resume-card {
+    height: auto;
+    margin-bottom: 15px;
+  }
+
+  .resume-card.final {
+    width: 100%;
+    text-align: left;
+    padding: 40px 30px;
+  }
 }
 
 /* SKILLS SECTION */
@@ -503,6 +646,16 @@ else it is styled in another css file
   right: 0;
 }
 
+@media only screen and (max-width: 768px) {
+  .skill-content {
+    flex-direction: column;
+  }
+
+  .skill-bars-container {
+    width: auto;
+  }
+}
+
 /* CONTACT SECTION */
 
 .contact-container {
@@ -547,8 +700,27 @@ else it is styled in another css file
   color: #ffbd39;
 }
 
-/* Footer */
+hr {
+  border-width: 0;
+  border-top: 0.5rem dotted #eaf6f6;
+  margin: 50px auto;
+  width: 7%;
+}
+@media only screen and (max-width: 768px) {
+  .contact-content {
+    flex-direction: column;
+  }
 
+  .contact-info-container {
+    margin-bottom: 50px;
+  }
+
+  hr {
+    margin: 0 auto 50px;
+  }
+}
+
+/* FOOTER */
 .footer {
   margin-top: 0px;
   text-align: center;
