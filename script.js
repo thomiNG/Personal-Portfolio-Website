@@ -50,10 +50,12 @@ function showSlides(n) {
   slideshowTimeout = setTimeout(showSlides, 7000); // Change image every 10 seconds
 }
 
-// scrolling animation for navigation bar (section depended)
+// animation for navigation bar (which section is active), when scrolling (section depended)
 let section = document.querySelectorAll("section");
 let menu = document.querySelectorAll("nav ul li a");
 window.onscroll = () => {
+  console.log("scrolling function works");
+  scrollFunction();
   section.forEach((i) => {
     let top = window.scrollY;
     let offset = i.offsetTop - 300;
@@ -99,9 +101,10 @@ window.addEventListener("scroll", reveal);
 let btnScrollTop = document.getElementById("btn-scroll-top");
 
 // When the user scrolls down 20px from the top of the document, show the button
-window.onscroll = function () {
-  scrollFunction();
-};
+// window.onscroll = function () {
+//   scrollFunction();
+//   // console.log("scrolling function works");
+// };
 
 function scrollFunction() {
   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
